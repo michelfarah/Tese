@@ -1,9 +1,14 @@
 \documentclass[a4paper]{article}
+%\documentclass[notimes,pnumplain]{abnt} % Carregamos o pacote abnt, que deixará tudo de acordo com a ABNT
+
 \pagestyle{plain}
 \renewcommand{\baselinestretch}{1.5}
 
-\usepackage[brazil]{babel}
 \usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage[alf]{abntcite} % Carregamos o pacote abntcite com a opção alf, ou seja, citações alfanuméricas
+
 
 \title{Projeto}
 \author{Michel Farah}
@@ -12,10 +17,13 @@
 \maketitle
 \section{Introdução e Justificativa}
 
-Os projetos de sequenciamento e geração de informações genômicas de alta qualidade estão cada vez mais sendo utilizados no melhoramento genético animal, a quantidade de nucleotídeos de polimorfismos simples (SNPs) identificados crescem rapidamente, por exemplo, WONG et al. (2004) relataram 2,8 milhões de SNPs no genoma de frangos, HAYES et al. (2004) encontraram 2507 SNPs em salmões, em bovinos, já estão disponíveis painéis com mais de 777000 SNPs (Illumina Inc., San Diego, CA).
+Os projetos de sequenciamento e geração de informações genômicas de alta qualidade estão cada vez mais sendo utilizados no melhoramento genético animal, a quantidade de nucleotídeos de polimorfismos simples (SNPs) identificados crescem rapidamente, por exemplo, \citeonline {WONG2004} relataram 2,8 milhões de SNPs no genoma de frangos, HAYES et al. (2004) {- \bf perdi a referência} encontraram 2507 SNPs em salmões, em bovinos, já estão disponíveis painéis com mais de 777000 SNPs (Illumina Inc., San Diego, CA){- \bf Colocar a ref. no DB}.
 
-Tradicionalmente, estudo para seleção de características de interesse são realizadas com base no fenótipo dos indivíduos e na informação do parentesco entre os animais. Esta seleção é eficiente, porém o processo é lento, principalmente para características que são medidas em apenas um sexo, como produção de leite, ou características medidas após o abate dos animais, como a qualidade da carne, ou ainda medidas mensuradas no final da vida do indivíduo, por exemplo, longevidade. Assim, para realizar programas de melhoramento para estas características, pesquisadores buscam identificar os genes para elas e a seleção de animais que carregam os alelos desejáveis (Meuwissen \& Goddard, 1996; Goddard \& Hayes, 2009).
+Tradicionalmente, estudo para seleção de características de interesse são realizadas com base no fenótipo dos indivíduos e na informação do parentesco entre os animais. Esta seleção é eficiente, porém o processo é lento, principalmente para características que são medidas em apenas um sexo, como produção de leite, ou características medidas após o abate dos animais, como a qualidade da carne, ou ainda medidas mensuradas no final da vida do indivíduo, por exemplo, longevidade. Assim, para realizar programas de melhoramento para estas características, pesquisadores buscam identificar os genes para elas e a seleção de animais que carregam os alelos desejáveis \cite{MEUWISSEN1996}  (Goddard \& Hayes, 2009) - {- \bf Colocar a ref. no DB}.
 
-Com estas informações genômicas, permite, também, aos pesquisadores aumentar a precisão da avaliação genética dos animais, e segundo MEUWISSEN et al. (2001), esta seleção genômica aumenta a taxa de melhoramento genético e reduz o custo do teste de progênie, permitindo aos criadores pré-selecionar animais que tenham herdado segmentos cromossômicos de maior mérito.
+Com estas informações genômicas, permite, também, aos pesquisadores aumentar a precisão da avaliação genética dos animais, e segundo \cite{MEUWISSEN2001}, esta seleção genômica aumenta a taxa de melhoramento genético e reduz o custo do teste de progênie, permitindo aos criadores pré-selecionar animais que tenham herdado segmentos cromossômicos de maior mérito.
+
+
+\bibliography{projeto}
 
 \end{document}

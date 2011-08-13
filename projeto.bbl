@@ -1,0 +1,33 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{1.52 }
+
+\bibitem[{Kang} et al. 2010]{KANG2010}
+\abntrefinfo{{Kang} et al.}{{Kang} et al.}{2010}
+{{Kang}, H.~M. et al. Variance component model to account for sample structure
+  in genome-wide association studies.
+\emph{Nature Genetics}, v.~42, n.~4, p. 348--356, Março 2010.}
+
+\bibitem[Meuwissen e Goddard 1996]{MEUWISSEN1996}
+\abntrefinfo{Meuwissen e Goddard}{MEUWISSEN; GODDARD}{1996}
+{MEUWISSEN, T. H.~E.; GODDARD, M.~E. The use of marker haplotypes in animal
+  breeding schemes.
+\emph{Genetics Selection Evolution}, v.~28, p. 161--176, 1996.}
+
+\bibitem[{Meuwissen}, {Hayes} e {Goddard} 2001]{MEUWISSEN2001}
+\abntrefinfo{{Meuwissen}, {Hayes} e {Goddard}}{{Meuwissen}; {Hayes};
+  {Goddard}}{2001}
+{{Meuwissen}, T. H.~E.; {Hayes}, B.~J.; {Goddard}, M.~E. Prediction of total
+  genetic value using genome-wide dense marker maps.
+\emph{Genetics}, v.~157, p. 1819--1829, Abril 2001.}
+
+\bibitem[Wong et al. 2004]{WONG2004}
+\abntrefinfo{Wong et al.}{WONG et al.}{2004}
+{WONG, G. K.~S. et al. A genetic variation map for chicken with 2.8 million
+  single-nucleotide polymorphisms.
+\emph{Nature}, v.~432, p. 717--722, dezembro 2004.}
+
+\end{thebibliography}
