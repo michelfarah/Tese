@@ -1,5 +1,5 @@
-\documentclass[a4paper]{article}
-%\documentclass[notimes,pnumplain]{abnt} % Carregamos o pacote abnt, que deixará tudo de acordo com a ABNT
+\documentclass[a4paper]{report}
+%\documentclass[notimes,pnumplain]{abnt} % Pacote ABNT, que deixará tudo de acordo com a ABNT
 
 \pagestyle{plain}
 \renewcommand{\baselinestretch}{1.5}
@@ -15,13 +15,29 @@
 
 \begin{document}
 \maketitle
+\tableofcontents
+\newpage
 \section{Introdução e Justificativa}
+Tradicionalmente, estudo para seleção de características de interesse são realizadas com base no fenótipo dos indivíduos e na informação do parentesco entre os animais. Esta seleção é eficiente, porém o processo é lento, principalmente para características que são medidas em apenas um sexo, como produção de leite, ou características medidas após o abate dos animais, como a qualidade da carne, ou ainda medidas mensuradas no final da vida do indivíduo, por exemplo, longevidade. Assim, para realizar programas de melhoramento para estas características, pesquisadores buscam identificar os genes para elas e a seleção de animais que carregam os alelos desejáveis \cite{MEUWISSEN1996}.
 
-Os projetos de sequenciamento e geração de informações genômicas de alta qualidade estão cada vez mais sendo utilizados no melhoramento genético animal, a quantidade de nucleotídeos de polimorfismos simples (SNPs) identificados crescem rapidamente, por exemplo, \citeonline {WONG2004} relataram 2,8 milhões de SNPs no genoma de frangos, HAYES et al. (2004) {- \bf perdi a referência} encontraram 2507 SNPs em salmões, em bovinos, já estão disponíveis painéis com mais de 777000 SNPs (Illumina Inc., San Diego, CA){- \bf Colocar a ref. no DB}.
+Os projetos de sequenciamento e geração de informações genômicas de alta qualidade estão cada vez mais sendo utilizados no melhoramento genético animal, a quantidade de nucleotídeos de polimorfismos simples (SNPs) identificados crescem rapidamente, por exemplo, \citeonline {WONG2004} relataram 2,8 milhões de SNPs no genoma de frangos, \citeonline{ANDREASSEN2010} encontraram 112 SNPs em 88 genes diferentes de salmões e em bovinos, já estão disponíveis painéis para a identificação de mais de 777000 SNPs \cite{illumina}.
 
-Tradicionalmente, estudo para seleção de características de interesse são realizadas com base no fenótipo dos indivíduos e na informação do parentesco entre os animais. Esta seleção é eficiente, porém o processo é lento, principalmente para características que são medidas em apenas um sexo, como produção de leite, ou características medidas após o abate dos animais, como a qualidade da carne, ou ainda medidas mensuradas no final da vida do indivíduo, por exemplo, longevidade. Assim, para realizar programas de melhoramento para estas características, pesquisadores buscam identificar os genes para elas e a seleção de animais que carregam os alelos desejáveis \cite{MEUWISSEN1996}  (Goddard \& Hayes, 2009) - {- \bf Colocar a ref. no DB}.
+Com estas informações genômicas, permite, também, aos pesquisadores aumentar a precisão da avaliação genética dos animais, e segundo \citeonline{MEUWISSEN2001}, esta seleção genômica aumenta a taxa de melhoramento genético e reduz o custo do teste de progênie, permitindo aos criadores pré-selecionar animais que tenham herdado segmentos cromossômicos de maior mérito.
 
-Com estas informações genômicas, permite, também, aos pesquisadores aumentar a precisão da avaliação genética dos animais, e segundo \cite{MEUWISSEN2001}, esta seleção genômica aumenta a taxa de melhoramento genético e reduz o custo do teste de progênie, permitindo aos criadores pré-selecionar animais que tenham herdado segmentos cromossômicos de maior mérito.
+Assim, vem crescendo cada vez mais a quantidade de pesquisadores interessados em utilizar as informações genômicas nos programas de melhoramento genético animal \cite{MEUWISSEN1996, CHRISTENSEN2010, HEYES2010, GIANOLA2010}, porém, estas previsões dos valores genéticos genômicos são obtidas por estimativa de um efeito causado por marcadores ou usando o modelo das Equações de Modelos Mistos com uma matriz de parentesco genômica, denominada Matriz G \cite{VANRADEN2008}, simples interpretação e de fácil manipulação \cite{LEGARRA2009}.
+
+Contudo, as maioria das pesquisas visam a utilização das informações genômicas para a determinação dos parâmetros genéticos e para verificar o comportamento de determinadas características de interesse, porém, de acordo com \citeonline{MALHADO2008} é imprescindível conhecer os diferentes fatores que interferem potencialmente na seleção e no progresso genético, como por exemplo, tamanho efetivo, intervalo de gerações, variabilidade genética e endogamia.
+
+A endogamia pode ser definida como o acasalamento de indivíduos mais aparentados entre si, do que o parentesco médio esperado, se eles fossem escolhidos ao acaso, na população. Assim, uma consequência é o aumento da quantidade de homozigose em razão da diminuição da heterozigose, portanto, aumenta a probabilidade de dois alelos em um loco tomado ao acaso sejam idênticos por descendência \cite{LOPES2005}.
+
+De acordo com \citeonline{MEUWISSEN1992}, existem diversos algoritmos computacionais que permitem o cálculo do coeficiente de endogamia de grandes populações, de forma rápida e eficiente. No entanto, estes algoritmos trabalham apenas com as informações de parentesco, utilizando uma matriz de parentesco (A) e quanto maior o número de gerações informadas maior a precisão desta estimativa da probabilidade de genes idênticos por descendência.
+
+Porém, com o avanço da tecnologia e a possibilidade de genotipagem dos indivíduos possibilitou a utilização de informações mais precisas sobre os genes idênticos em estado que podem ser compartilhados através de ancestrais comuns ausentes no pedigree e assim tornou-se viável a utilização de uma matriz de parentesco genômica (G) que pode ser calculada por diversos métodos \cite{FORNI2011}.
+
+Como é inviável a genotipagem de uma população inteira, \citeonline{LEGARRA2009} e \citeonline{MIZTAL2009} propuseram uma integração entre a matriz (A) e (G) em uma única matriz (H), assim, possibilitaram a avaliação genética via BLUP utilizando uma única etapa, esta aplicada com sucesso em gado de leite \cite{AGUILAR2010}.
+
+\citeonline{FORNI2011} avaliaram as diferentes formas de montar a matriz de parentesco genômica (G) de acordo com as frênquencias alélicas com posterior integração com a matriz (A) sobre o impacto nas estimativas dos valores genéticos e componentes de variância e concluiram que estas estimativas utlizando uma matriz de parentesco (A) ou conjunta pedigree-genômica (H) foram similares e que se as frequÊncias alélicas na população-base forem diferentes de 0,5, os alelos raros contribuem para uma maior semelhança genética entre os indivíduos.
+
 
 
 \bibliography{projeto}
