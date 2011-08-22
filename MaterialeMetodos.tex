@@ -1,0 +1,37 @@
+\section{Material e Métodos}
+\subsection{Dados}
+Os dados utilizados serão provenientes de fazendas que integram o programa de melhoramento genético da Conexão Delta G, contando com 2000 animais machos da raça Nelore terminados em confinamento com idade próxima a dois anos, filhos de cerca de 100 touros, provenientes de seis rebanhos, todos com informações de desempenho e genealogia disponíveis. Destes, 980 animais serão genotipados utilizando um painel de aproximadamente 800000 SNP do BovineSNP BeadChip (High-Density Bovine BeadChip) \cite{illumina}.
+
+Na análise de controle de qualidade, os SNPs serão submetidos a um teste de probabilidade, assumindo uma distribuição de 1ui-quadrado e nível de significância de P<0,05.
+
+Os SNPs com desvios significativos do equilíbrio de Hardy-Weinberg serão excluídos da análise, assim como SNPs com baixa frequência ({\it minor frequency alleles}: MAF) e aqueles que estejam genotipados em menos de 50\% da população. Todas as análises serão realizadas utilizando o conjunto de dados completo e os registros serão analizados utilizando um modelo animal.
+
+\subsection{Matriz de parentesco pedigree-genômica}
+
+A matriz de parentesco pedigree-genômica (H) será utilizada para substituir a matriz de parentesco (A). A matrix H será obtida pela combinação das informações de pedrigree e genômica \cite{AGUILAR2010}
+
+\begin{equation}
+H^{-1}=A^{-1}+
+\begin{bmatrix}
+0 & 0 \\
+0 & G^{-1}-A^{-1}_{22}
+\end{bmatrix},
+\end{equation}
+
+onde $G^{-1}$ é a inversa da matriz de parentesco genômica e $A^{-1}_{22}$ é a inversa da matriz de parentesco dos animais genotipados. As comparações irão envolver várias matrizes de parentesco genômica (G), de modo geral, para a obtenção da matriz G foi usada a equação descrita por \citeonline {VANRADEN2008} :
+
+\begin{equation}
+G = \frac{(M-P)(M-P)'}{2 \sum_{j=1}^{m} p_{j} (1-p_{j})},
+\end{equation}
+
+em que $M$ é uma matriz alélica com $m$ colunas (m=número total de marcadores) e $n$ linhas (n=número total de animais genotipados); e $P$ é uma matriz que contém a frequência do segundo alelo ($p_{j}$), expresso como $2p_{j}$.
+
+A matriz $M$ será preenchida com -1 se o genótipo do animal $i$ para o SNP $j$ for homozigoto, pode ser preenchido com 0 se for heterozigoto ou preenchido com 1 se o genótipo for o outro homozigoto. As frequências alélicas utilizadas serão: 0,5 para todos os marcadores (G05), a frequência média do menor alelo (GMF) e a frequência observada do alelo de cada SNP (GOF).
+
+\subsection{Matriz IBS}
+
+Utilizando o método descrito anteriormente, para obter a matriz $M$, de acordo com \citeonline{VANRADEN2008}, os elementos da diagonal de $MM'$ representam o número de locus em homozigose para cada indivíduo e os elementos fora da diagonal representam o número de alelos compartilhados por parentes. Em contraste, os elementos da diagonal de $M'M$ demonstram o número de indivíduos homozigotos para cada locus e fora da diagonal indicam o número de vezes que os alelos em diferentes loci foram herdados pelo mesmo indivíduo.
+
+\subsection{Matriz IBD}
+
+Devido a complexidade para a obtenção da matriz genômica com informações de alelos idênticos por descendência, para a análise desta matriz será utilizada a simulação de dados.
