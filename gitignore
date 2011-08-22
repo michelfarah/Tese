@@ -1,0 +1,32 @@
+README
+
+Projeto da tese de doutorado.
+
+
+TESE DOUTORADO MICHEL
+
+Global setup:
+ Set up git
+  git config --global user.name "Michel Farah"
+  git config --global user.email michelfarah@zootecnista.com.br
+        
+Next steps:
+  mkdir Tese
+  cd Tese
+  git init
+  touch README
+  git add README
+  git commit -m 'first commit'
+  git remote add origin git@github.com:michelfarah/Tese.git
+  git push -u origin master
+      
+Existing Git Repo?
+  cd existing_git_repo
+  git remote add origin git@github.com:michelfarah/Tese.git
+  git push -u origin master
+
+Importing a Subversion Repo?
+$ git svn clone -s SVN_REPO_URL LOCAL_DIR
+$ cd LOCAL_DIR
+$ git remote add origin git@github.com:GITHUB_USERNAME/REPO_NAME.git
+$ git push origin master
